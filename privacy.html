@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How J-Collection Recovery accesses, stores, and uses Google data for personal encrypted backups.">
+  <title>Privacy policy · J-Collection Recovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><a class="brand" href="./">HushFoundry <span>/ J-Collection Recovery</span></a><nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy policy</a></nav></header>
+  <main>
+    <p class="eyebrow">Last updated September 17, 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="intro">J-Collection Recovery is a personal Desktop application operated on its owner's computer. Google access is used only to provide the encrypted backup and recovery features the owner enables.</p>
+    <section><h2>Google data accessed and its purpose</h2><p>The application uses the limited <code>https://www.googleapis.com/auth/drive.file</code> scope. It creates and manages its own encrypted backup files, repository marker, and verification receipts in the selected Drive account. It lists and downloads accessible recovery files for validation and restoration, and deletes older recovery files according to the retention policy only after a new copy has been verified.</p><p>The application checks the Google account's email address against the owner's selected backup account and checks available storage before a cloud upload. It does not request permission to read the account's entire Drive, Gmail, contacts, or calendar.</p></section>
+    <section><h2>Storage and protection</h2><p>Recovery archives contain a local catalog, personal collection decisions, reviewed artwork originals, and application configuration. Archives are encrypted on the owner's computer before storage in Google Drive; local recovery copies are also encrypted. Archived contents and filenames use rclone crypt encryption.</p><p>The owner retains the encryption key separately. Recovery archives exclude the key, OAuth credentials, collection video files, and generated thumbnail caches. OAuth tokens and client configuration are stored in the application's private local configuration with restricted filesystem permissions. Decrypted working copies used for verification or recovery remain on the owner's computer.</p></section>
+    <section><h2>Sharing and use</h2><p>The Desktop application sends encrypted recovery files to Google Drive and uses Google's OAuth service to obtain the owner's consent. HushFoundry does not operate a server that receives these backups, account details, or credentials.</p><p>Google user data is not sold, used for advertising, used to train AI models, or shared with unrelated third parties. Its use is limited to the backup and recovery functions described here. J-Collection Recovery's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p></section>
+    <section><h2>Retention and owner controls</h2><p>The default retention policy keeps fourteen verified recovery generations per destination. Backup failures can leave additional files so that previous successful recovery points are preserved.</p><p>The owner can disable scheduled backups, remove recovery files from local storage or Google Drive, and revoke the application's access through <a href="https://myaccount.google.com/permissions">Google Account connections</a>. Revoking access stops future authorized API access; it does not automatically delete existing backups or the local configuration.</p></section>
+    <section><h2>This informational website</h2><p>These static pages do not request Google access, use analytics, or embed tracking scripts. GitHub Pages hosts the site and may log visitors' IP addresses for security, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p></section>
+    <section><h2>Contact and updates</h2><p>The developer is HushFoundry. The application's Google consent screen provides its configured support email; the <a href="https://github.com/hushfoundry">HushFoundry developer profile</a> identifies its publisher. This policy will be updated if the application's handling of Google data changes.</p></section>
+  </main>
+  <footer><a href="./">Back to J-Collection Recovery</a><span>HushFoundry</span></footer>
+</body>
+</html>
